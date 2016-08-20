@@ -1,0 +1,60 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}"/>
+      <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+      <title>TreasureLaura</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-static-top text-center" role="navigation">
+      <a href="/">
+        <img src="{% static 'images/logo.png' %}" alt="TreasureGram" height="90" />
+      </a>
+    </nav>
+    <main class="container" role="main">
+      {% for treasure in treasures %}
+      <div class="treasure panel panel-default">
+
+        <div class="panel-heading">
+          <h2 class="panel-title">{{ treasure.name }}</h2>
+        </div>
+        <div class="panel-body">
+          <div class="treasure-photo">
+            <img src="{{ treasure.img_url}}" height="100" />
+          </div>
+          <table class="treasure-table">
+            <tr>
+              <th>
+                <img src="{% static "images/material-icon.png" alt="Material" %}" />
+                Material:
+              </th>
+              <td>  {{ treasure.material }}  </td>
+            </tr>
+            <tr>
+              <th>
+                <img src="{% static "images/value-icon.png" alt="Value" %}" />
+                Value:
+              </th>
+              <td>
+                {% if treasure.value > 0 %}
+                 {{ treasure.value }}
+                {% else %}
+                 We don't know
+                {% endif %}
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <img src="{% static "images/location-icon.png" alt="location" %}" />
+                Location:
+              </th>
+              <td>{{ treasure.location }}  </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      {% endfor %}
+    </main>
+  </body>
+</html>
