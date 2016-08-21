@@ -1,0 +1,52 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet" media="screen" />
+    <link href="{% static 'style.css' %}" rel="stylesheet" media="screen" />
+    <title>Travel Tracker</title>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+      <a class="navbar-brand" href="/"><img src="{% static 'images/traveltracker-brand.svg' %}" height=200 alt="Travel Tracker Brand" /></a>
+  </nav>
+
+  <main class="container">
+    {% for location in locations %}
+    <div class="tracker panel panel-default {% cycle 'tracker-left' 'tracker-right' %}">
+      <div class="panel-heading">
+        <h2 class="panel-title">{{ location.name }}</h2>
+      </div>
+      <div class="panel-body">
+        <div class="tracker-photo">
+          <img src="{{ location.img_url }}" alt="" height="300" />
+        </div>
+          <table class="tracker-table">
+            <tr>
+             <th>
+                 <img src="{% static 'images/traveltracker-brand-location-icon.png' %}" alt="Location Icon" />
+                 Location:
+             </th>
+             <td>{{ location.name }}</td>
+            </tr>
+           <tr>
+             <th>
+               <img src="{% static 'images/traveltracker-brand-restaurant-icon.png' %}" alt="Restaurant Icon" />
+                Number of Restaurants:
+            </th>
+            <td>{{ location.num_restaurants }}</td>
+           </tr>
+           <tr>
+               <th>
+                   <img src="{% static 'images/traveltracker-brand-predator-icon.png' %}" alt="Predator Icon" />
+                   Predators:
+               </th>
+               <td>{{ location.predators }}</td>
+           </tr>
+          </table>
+        </div>
+      </div>
+      {% endfor %}
+     </main>
+</body>
+</html>

@@ -1,0 +1,137 @@
+body {
+  background: #efefef;
+  color: #0d0d0d;
+}
+
+.navbar {
+  margin-bottom: 40px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.navbar-brand {
+  float: none;
+  height: auto;
+  padding: 0;
+}
+
+.navbar-brand img {
+  display: inline-block;
+}
+
+.navbar-default {
+  background: url("images/traveltracker-header-bg.jpg") #ffffe6 no-repeat center center;
+  border-color: #a8aaa9;
+}
+
+.panel {
+  background: #ffffe6;
+  border-color: #636968;
+  box-shadow: 0 2px 2px #b3b3b3;
+}
+
+.panel-default .panel-heading {
+  background: #ffd9b3;
+  border-color: #636b69;
+}
+
+.panel-body {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+}
+
+.panel-title {
+  color: #0d0d0d;
+}
+
+/* ----- Custom Stuff ----- */
+
+.footer {
+  background: #e6e2e2;
+  border-top: 1px solid #d6d4d4;
+  color: #bcbbbd;
+  font-weight: bold;
+  height: 60px;
+  margin-top: 40px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.footer > .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container > .text-muted {
+  margin: 20px 0;
+}
+
+.tracker {
+  margin-bottom: 20px;
+}
+
+.tracker:last-child {
+  margin-bottom: 0;
+}
+
+.tracker-photo {
+  position: relative;
+  text-align: center;
+  width: 45%;
+}
+
+.tracker-photo img {
+  border: 2px solid #8aa2aa;
+  height: auto;
+  max-width: 100%;
+}
+
+.tracker-table {
+  margin-top: 10px;
+  width: 45%;
+}
+
+.tracker-table img {
+  margin-right: 10px;
+}
+
+.tracker-table tr {
+  border-bottom: 1px solid #ece4cf;
+}
+
+.tracker-table td,
+.tracker-table th {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  vertical-align: baseline;
+}
+
+.tracker-table th {
+  color: #ffffff;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.tracker-table td:last-child {
+  padding-left: 10px;
+  width: 100%;
+}
+
+.tracker-table tr:last-child {
+  border-bottom: none;
+}
+
+.tracker-left .tracker-photo {
+  float: left;
+  margin-right: 2%;
+}
+
+.tracker-right .tracker-photo,
+.tracker-left .tracker-table {
+  float: right;
+}
+
+.tracker-right .tracker-table {
+  float: left;
+}
